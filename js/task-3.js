@@ -1,23 +1,23 @@
+
+
+
+
+
 // function checkForSpam(message) {
-//     const newmessage = message.toLowerCase();
-//     const value =  newmessage.includes("spam" || "sale") ? true : false;
-//     return value;
+//     const normalizedMessage = message.toLowerCase();
+//   if (normalizedMessage.includes(`spam`)) {
+//       return true;
+//   } else if(normalizedMessage.includes(`sale`)){
+//       return true;
+//   } else {
+//       return false;
+//   }
 // }
-
-// Де в цьму прикладі помилка ?
-
-
 
 
 function checkForSpam(message) {
-    const newmessage = message.toLowerCase();
-  if (newmessage.includes(`spam`)) {
-      return true;
-  } else if(newmessage.includes(`sale`)){
-      return true;
-  } else {
-      return false;
-  }
+  const normalizedMessage = message.toLowerCase();
+  return normalizedMessage.includes("spam") || normalizedMessage.includes("sale");
 }
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
